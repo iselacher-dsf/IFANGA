@@ -25,7 +25,121 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/icon.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/sidebar.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/transition.css">
+<style type="text/css">
+  body {
+    background-color: #FFFFFF;
+  }
+  .ui.menu .item img.logo {
+    margin-right: 1.5em;
+  }
+  .main.container {
+    margin-top: 7em;
+  }
+  .wireframe {
+    margin-top: 2em;
+  }
+  .ui.footer.segment {
+    margin: 5em 0em 0em;
+    padding: 5em 0em;
+  }
+  .ui.inverted.menu .item:before {
+    background: rgba(255, 255, 255, 0);
+  }
+  .ui.menu .item {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .ui.link.inverted.menu .item:hover, .ui.inverted.menu .dropdown.item:hover, .ui.inverted.menu .link.item:hover, .ui.inverted.menu a.item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #00000087;
+}
+  .ui.inverted.menu .item, .ui.inverted.menu .item > a:not(.ui) {
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 500;
+}
+.ui.inverted.menu {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    }
+    .logo-text:hover {
+      color:#000 !important;
+    }
+    .logo-text {
+      padding-left: 0px !important;
+        font-size: 30px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px !important;
+    font-family: Montserrat;
+    }
+    body {
+      font-family:Open Sans !important;
+    }
+    .ui.menu {
+    font-family: Open Sans;
+}
+.ui.text.container {
+    font-family: Open Sans;
+    max-width: inherit !important;
+    line-height: 1.5;
+}
+.ui.black.buttons .button:hover, .ui.black.button:hover {
+    background-color: #27292ad1;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.ui.black.buttons .button, .ui.black.button {
+    background-color: #1B1C1D;
+    color: #FFFFFF;
+    text-shadow: none;
+    background-image: none;
+    transition: 0.5s;
+}
+.map-background {
+    background: url(https://bootstrapmade.com/demo/themes/BizPage/img/about-bg.jpg) center top no-repeat fixed;
+    background-size: cover;
+    padding: 70px 0 70px 0;
+    position: relative;
+}
+.map-background .container {
+    position: relative;
+    z-index: 10;
+}
+.map-background::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.92);
+    z-index: 9;
+}
+@media only screen and (min-width: 768px){
+.ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless) > .container > .item:not(.right):not(.borderless):first-child {
+    border-left: 1px solid rgba(34, 36, 38, 0) !important;
+}}
+.margin-twenty-five-right {
+  margin-right: 25px !important;
+}
 
+.ui.menu:not(.vertical) .right.item.lang-switch, .ui.menu:not(.vertical) .right.menu.lang-switch {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0 !important;
+}
+@media only screen and (min-width: 1200px){
+.ui.container {
+    width: 1183px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}}
+.section-title {
+  font-weight: 900 !important;
+    font-family: Montserrat !important;
+    font-size: 41px !important;
+}
+  </style>
   <style type="text/css">
 
     .hidden.menu {
@@ -188,78 +302,22 @@
     background-color: #538234;
 ">Login</button><div role="listbox" aria-expanded="false" class="ui pointing dropdown link item" tabindex="0"><i aria-hidden="true" class="globe small icon"></i><div class="text" role="alert" aria-live="polite">English</div><i aria-hidden="true" class="dropdown icon"></i><div class="menu transition"><div role="option" class="item">List Item</div><div role="option" class="item">List Item</div><div class="divider"></div><div class="header">Header Item</div><div role="option" class="item"><i class="dropdown icon"></i><span class="text">Submenu</span><div class="menu transition"><div role="option" class="item">List Item</div><div role="option" class="item">List Item</div></div></div><div role="option" class="item">List Item</div></div></div></div></div></div></div>
 
-  <div class="ui inverted vertical masthead center aligned segment" style="background: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)),url(Map.jpg);margin-top: 126px;">
-    <div class="column" style="
-    margin-top: -41em;
-    text-align: left;
-    display: inline-block;
-    padding-right: 232px;
-    margin-bottom: 42px;
-">
-      <h1 class="ui header" style="
-">
-        Getting what you want 
-      </h1>
-      <h2 style="
-    color: black;
-    margin: 0;
-">at a mere fraction.</h2><p style="
-    color: gray;
-    margin: 0px;
-">Sign up for IFANGA!</p>
-    <p style="
-    color: grey;
-">Just a few steps to complete the sign up process.</p>
-      <div class="ui huge black button" style="
-    background-color: #538234;
-">Get Started <i class="right arrow icon"></i></div>
-    </div>
-
-<div class="three wide column" style="display: inline-block;margin-top: 23px;"><div class="one column row"><div class="column rendered-example collections-form-variations-form-example-inverted"><div class="ui inverted segment" style="
-    background: #ffffff;
-"><form class="ui inverted form" style="
-"><h2 class="ui header no-anchor" id="shorthand" style="margin-bottom: 1.5em;">Sign Up<div class="content" style="
-    text-align: right;
-    padding-left: 122px;
-"><div class="field"><div class="ui checked toggle checkbox"><input type="checkbox" class="hidden" tabindex="0" value="on" data-onstyle="success" checked="" data-toggle="toggle"><label>Artist</label></div></div></div></h2><div class="field" style="text-align: left;"><label style="
-    color: black;
-">First Name</label><div class="ui fluid input"><textarea placeholder="Enter First Name" style="resize: none" rows="1"></textarea></div></div><div class="field"><label style="
-    color: black;
-    text-align: left;
-">Last name</label><div class="ui fluid input"><textarea placeholder="Enter Last Name" style="resize: none" rows="1"></textarea></div></div>
-<div class="field" style="text-align: left;"><label style="
-    color: black;
-">Email</label><div class="ui fluid input"><textarea placeholder="johndoe@gmail.com" style="resize: none" rows="1"></textarea></div></div>
-<div class="field" style="text-align: left;"><label style="
-    color: black;
-">Password</label><div class="ui fluid input"><textarea placeholder="Enter Password" style="resize: none" rows="1"></textarea></div></div>
-<div class="field" style="text-align: left;"><label style="
-    color: black;
-">Confirm Password</label><div class="ui fluid input"><textarea placeholder="Enter First Name" style="resize: none" rows="1" type="password"></textarea></div></div><a class="ui huge button" style="
-    padding: 0.78571429em 5.8em 0.78571429em;
-    background-color: #538234;
-    color: white;
-">Sign Up</a>
-
-<p style="max-width: 50rem;font-size: 10px;color: grey;text-align: center;">By signing up to create an account I accept the General Terms &amp; Conditions</p><p style="max-width: 50rem;font-size: 11px;color: grey;text-align: center;">You can use your social account to sign up</p><div class="one wide column" style="
-    text-align: center;
-"> <i aria-hidden="true" class="facebook f big icon" style="
-    color: royalblue;
-"></i><i aria-hidden="true" class="twitter big  icon" style="
-    color: cornflowerblue;
-"></i><i aria-hidden="true" class="google plus big icon" style="
-    color: orangered;
-"></i><i aria-hidden="true" class="instagram big icon" style="
-    color: darkcyan;
-"></i>
-            
-        </div>
-
-</form></div></div><div class="column"></div></div>
-        </div>
-
-  
-  </div>
+  <section class="map-background">
+  <div class="ui main text middle aligned stackable grid container">
+    <div class="row">
+        <div class="eight wide column">
+    <h1 class="ui header section-title">Getting what you want at a mere fraction</h1>
+    <p>Sign up for IFANGA!</p>
+    <p>A text container is used for the main container, which is useful for single column layouts</p>
+    <img class="wireframe" src="assets/images/wireframe/media-paragraph.png">
+    <img class="wireframe" src="assets/images/wireframe/paragraph.png">
+    <img class="wireframe" src="assets/images/wireframe/paragraph.png">
+    <img class="wireframe" src="assets/images/wireframe/paragraph.png">
+    <img class="wireframe" src="assets/images/wireframe/paragraph.png">
+    <img class="wireframe" src="assets/images/wireframe/paragraph.png">
+    <img class="wireframe" src="assets/images/wireframe/paragraph.png">
+</div></div>
+  </div></section>
 
   <div class="ui vertical stripe segment">
     <div class="ui middle aligned stackable grid container">
