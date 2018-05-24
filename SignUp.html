@@ -8,6 +8,8 @@
 
   <!-- Site Properties -->
   <title>IFANGA - Sign Up</title>
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/reset.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/site.css">
@@ -145,6 +147,23 @@
     })
   ;
   </script>
+  <style type="text/css">
+    #contacts p, 
+    #contacts p.lead{
+      margin: 0;
+    }
+    .authenticated{
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .unauthenticated{
+      display: none;
+    }
+    .modal-header:last-child{
+      border-bottom: 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -158,6 +177,7 @@
     <div class="right menu">
       <div class="item">
         <a class="ui button">Log in</a>
+
       </div>
       <div class="item">
         <a class="ui primary button">Sign Up</a>
@@ -176,19 +196,22 @@
   <a class="item">Signup</a>
 </div>
 
-
 <!-- Page Contents -->
 <div class="pusher">
-  <div><div style="border: 1px solid rgb(221, 221, 221); box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px; background-color: rgb(255, 255, 255);" class="ui borderless top fixed menu"><div style="max-width: 1127px!important;padding-top: 30px;padding-bottom: 30px;" class="ui text container"><div class="header item"><h1 style="
-    font-style: bold;
-">IFANGA</h1></div><a class="item">Create a Project</a><a class="item">Work</a><div class="right menu"><button class="ui black button" role="button" style="
+  <div><div style="border: 1px solid rgb(221, 221, 221); box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px; background-color: rgb(255, 255, 255);" class="ui borderless top fixed menu"><div style="max-width: 1127px!important;padding-top: 30px;padding-bottom: 30px;" class="ui text container"><div class="header item"><div class="header item"><img src="logo_farbig.png" style="
+    height: 45px;
+    width: 129px;
+"></div></div><a class="item" data-toggle="modal" data-target="#CreateAProjectModal">Create a Project</a><a class="item">Work</a><a class="item">Newsfeed</a><div class="right menu">
+  <button class="ui black button" role="button" style="
     color: white;
     font-size: 1.12857143rem;
-    height:;
     height: 40px;
-    margin-top: 10px;
+    margin-top: 25px;
     background-color: #538234;
-">Login</button><div role="listbox" aria-expanded="false" class="ui pointing dropdown link item" tabindex="0"><i aria-hidden="true" class="globe small icon"></i><div class="text" role="alert" aria-live="polite">English</div><i aria-hidden="true" class="dropdown icon"></i><div class="menu transition"><div role="option" class="item">List Item</div><div role="option" class="item">List Item</div><div class="divider"></div><div class="header">Header Item</div><div role="option" class="item"><i class="dropdown icon"></i><span class="text">Submenu</span><div class="menu transition"><div role="option" class="item">List Item</div><div role="option" class="item">List Item</div></div></div><div role="option" class="item">List Item</div></div></div></div></div></div></div>
+" data-toggle="modal" data-target="#loginModal"> Login</button>
+<div role="listbox" aria-expanded="false" class="ui pointing dropdown link item" tabindex="0">
+  <i aria-hidden="true" class="globe small icon"></i><div class="text" role="alert" aria-live="polite">English</div><i aria-hidden="true" class="dropdown icon"></i>
+<div class="menu transition"><div role="option" class="item">List Item</div><div role="option" class="item">List Item</div><div class="divider"></div><div class="header">Header Item</div><div role="option" class="item"><i class="dropdown icon"></i><span class="text">Submenu</span><div class="menu transition"><div role="option" class="item">List Item</div><div role="option" class="item">List Item</div></div></div><div role="option" class="item">List Item</div></div></div></div></div></div></div>
 
   <div class="ui inverted vertical masthead center aligned segment" style="background: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)),url(Map.jpg);margin-top: 130px;padding-top: 41px;">
     
@@ -229,15 +252,16 @@
     color: gray;
 "></i></div>
 
-</form></div></div><div class="column"></div></div>
+</form>
+</div></div><div class="column"></div></div>
         </div><div class="three wide column" style="display: inline-block;"><div class="one column row" style="
 "><div class="column rendered-example collections-form-variations-form-example-inverted" style="
 "><div class="ui inverted segment" style="
     background: #ffffff;
     padding-left: 46px;
-    padding-right: 50px;
+    padding-right: 50px;a
 "><form class="ui inverted form" style="
-"><h2 class="ui header no-anchor" id="shorthand" style="margin-bottom: 1.5em;">Sign Up<div class="content" style="
+"method="post" name="contactForm"><h2 class="ui header no-anchor" id="shorthand" style="margin-bottom: 1.5em;">Sign Up<div class="content" style="
     text-align: right;
     padding-left: 136px;
 "><div class="field"><div class="ui checked toggle checkbox"><input type="checkbox" class="hidden" readonly="" tabindex="0"><label>Artist</label></div></div></div></h2>
@@ -255,11 +279,12 @@
 ">Password</label><div class="ui fluid input"><textarea placeholder="Enter Password" style="resize: none" rows="1"></textarea></div></div>
 <div class="field" style="text-align: left;"><label style="
     color: black;
-">Confirm Password</label><div class="ui fluid input"><textarea placeholder="Enter First Name" style="resize: none" rows="1" type="password"></textarea></div></div><a class="ui huge button" style="
+">Confirm Password</label><div class="ui fluid input"><textarea placeholder="Enter First Name" style="resize: none" rows="1" type="password"></textarea></div></div>
+<button class="ui huge button" style="
     padding: 0.78571429em 5.8em 0.78571429em;
     background-color: #538234;
     color: white;
-">Sign Up</a>
+" data-toggle="modal" data-target="#registerModal" >Sign Up</button>
 
 <p style="max-width: 50rem;font-size: 10px;color: grey;text-align: center;">By signing up to create an account I accept the <a href="#">General Terms &amp; Conditions</a> </p>
 
@@ -314,24 +339,21 @@
 
   
 
-
-  
-
-  
-
-
-  
 <div class="ui inverted vertical footer segment">
     <div class="ui container">
       <div class="ui stackable inverted divided equal height stackable grid">
         <div class="seven wide column" style="
 ">
-          <h4 class="ui inverted header">IFANGA</h4>
+          <img src="logo_weiss.png" style="
+              height: 45px;
+              width: 129px;
+          "></h4>
           <div class="ui inverted link list">
-            <i aria-hidden="true" class="facebook f small icon"></i><i aria-hidden="true" class="twitter small icon"></i><i aria-hidden="true" class="linkedin small icon"></i><i aria-hidden="true" class="instagram small icon"></i>
+            <i aria-hidden="true" class="facebook f icon"></i><i aria-hidden="true" class="twitter icon"></i><i aria-hidden="true" class="linkedin icon"></i><i aria-hidden="true" class="instagram icon"></i>
             
             
             <a href="#" class="item">Copyright © 2018 by Intermedify GmbH</a>
+            <a href="#" class="item">Made by Digital Media Factory GmbH</a>
           </div>
         </div><div class="three wide column" style="
     box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.1); */
@@ -371,6 +393,163 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="Register" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="registerModalLabel">Register</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">First Name:</label>
+            <input type="text" class="form-control" id="registerFirstName">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Last Name:</label>
+            <input type="text" class="form-control" id="registerLastName">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Email:</label>
+            <input type="text" class="form-control" id="registerEmail">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Password:</label>
+            <input type="password" class="form-control" id="registerPassword">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Confirm Password:</label>
+            <input type="password" class="form-control" id="registerConfirmPassword">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="doRegister">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="loginModalLabel">Login</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Email:</label>
+            <input type="text" class="form-control" id="loginEmail">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Password:</label>
+            <input type="password" class="form-control" id="loginPassword">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="doLogin">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="CreateAProjectModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="loginModalLabel">Please login to create a project</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Email:</label>
+            <input type="text" class="form-control" id="loginEmail">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Password:</label>
+            <input type="password" class="form-control" id="loginPassword">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="doLogin">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="addContactModal" tabindex="-1" role="dialog" aria-labelledby="Add Contact" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form method="post" name="contactForm">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="addContactModalLabel">Add Contact</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="ui " id="name" required placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" required placeholder="Enter Email">
+            </div>
+            <h3>Location</h3>
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" class="form-control" id="city" placeholder="Enter City">
+            </div>
+            <div class="form-group">
+              <label for="email">State</label>
+              <input type="text" class="form-control" id="state" placeholder="Enter State">
+            </div>
+            <div class="form-group">
+              <label for="zip">Zip</label>
+              <input type="text" class="form-control" id="zip" placeholder="Enter Zip Code">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary addValue">Submit</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="Message" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="messageModalLabel">Message</h4>
+        </div>
+        <div class="modal-footer">
+          <div class="pre-auth">
+            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+            <span class="">
+              <button type="submit" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Register</button>
+              <button type="submit" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Login</button>
+            </span>
+          </div>
+          <div class="post-auth"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- Latest compiled and minified Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <!-- Include Firebase Library -->
+  <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+  <!-- Contacts Store JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
 
