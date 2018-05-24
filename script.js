@@ -94,7 +94,7 @@ $(document).ready(function(){
           $('#messageModalLabel').html(spanText('Success!', ['center', 'success']))
           setTimeout(function () {
             $('#messageModal').modal('hide');
-            window.open("http://iselacher-dsf.github.io/IFANGA/Dashboard.html","_self");
+            window.open("http://iselacher-dsf.github.io/IFANGA/Dashboard.html");
             document.getElementById("cookie1").innerHTML = "change in text or whatever";
             contactsRef.child(auth.uid)
               .on("child_added", function(snap) {
